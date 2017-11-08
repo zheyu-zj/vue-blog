@@ -1,0 +1,17 @@
+#learn {
+  h2 {
+    text-align: left;
+    @include font(30px, $mainColor, 500);
+    line-height: 4;
+  }
+  .info {
+    text-align: left;
+    @include font(18px, rgba(0, 0, 0, .4), 500);
+    line-height: 1.5;
+  }
+  .learn {
+    width: 173px;
+    margin-top: 30px;
+    @include simpleButton(45px, #fff, $mainColor, $hoverMainColor, 18px)
+  }
+}

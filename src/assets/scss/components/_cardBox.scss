@@ -1,0 +1,47 @@
+#card-box {
+  margin-bottom: 20px;
+  .ivu-card-head {
+    border: none;
+    padding: 0;
+    p {
+      height: auto;
+    }
+    .img-box {
+      display: block;
+      width: 100%;
+      overflow: hidden;
+      img {
+        width: 100%;
+        transition: .9s;
+        transform: scale(1.2);
+        &.hover {
+          transform: scale(1)
+        }
+      }
+    }
+  }
+  .ivu-card-body {
+    padding: 25px;
+    p {
+      text-align: left;
+    }
+    .title {
+      margin-bottom: 10px;
+      @include font(15px, #000, 500);
+      line-height: 1.1;
+    }
+    .time {
+      margin-bottom: 20px;
+      @include font(11px, rgba(0, 0, 0, .4));
+      line-height: 1.6;
+    }
+    .content {
+      margin-bottom: 1.5em;
+      @include font(14px, rgba(0, 0, 0, .5), 500);
+      line-height: 1.6;
+    }
+    a {
+      @include link(11px, #000, 500);
+    }
+  }
+}

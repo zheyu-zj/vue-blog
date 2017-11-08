@@ -1,0 +1,10 @@
+@mixin simpleButton($height,$color,$background,$hoverBackground,$font:12px,$font-weight:500) {
+  display: block;
+  @include lineHeight($height);
+  @include font($font, $color, $font-weight);
+  background: $background;
+  &:hover {
+    background: $hoverBackground;
+    color: #fff;
+  }
+}

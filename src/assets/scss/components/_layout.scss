@@ -1,0 +1,125 @@
+@keyframes nav-hover {
+  0% {
+    width: 0;
+  }
+  65% {
+    width: 120%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+body {
+  background: whitesmoke;
+  #app {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    .ivu-menu-light {
+      background: none;
+      .ivu-menu-item {
+        border: none;
+      }
+      .ivu-menu-item-active:not(.ivu-menu-submenu) {
+        border: none;
+        p {
+          &:after {
+            position: absolute;
+            left: 50%;
+            bottom: -5px;
+            transform: translateX(-50%);
+            content: '';
+            width: 100%;
+            height: 2px;
+            background: $mainColor;
+          }
+        }
+      }
+    }
+    .ivu-menu-vertical.ivu-menu-light:after {
+      display: none;
+    }
+    .menu-contnet {
+      a {
+        display: block;
+      }
+      p {
+        display: inline;
+        position: relative;
+        color: #000;
+      }
+      .ivu-menu-item {
+        &:hover {
+          p {
+            &:after {
+              position: absolute;
+              left: 50%;
+              bottom: -5px;
+              transform: translateX(-50%);
+              content: '';
+              height: 2px;
+              background: $mainColor;
+              animation: nav-hover .3s ease forwards;
+            }
+          }
+        }
+      }
+    }
+    .layout {
+      border: 1px solid #d7dde4;
+      position: relative;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .layout-breadcrumb {
+      padding: 10px 15px 0;
+    }
+    .layout-content {
+      min-height: 200px;
+      margin: 15px;
+      overflow: hidden;
+      background: #fff;
+      border-radius: 4px;
+    }
+    .layout-content-main {
+      padding: 10px;
+    }
+    .layout-copy {
+      text-align: center;
+      padding: 10px 0 20px;
+      color: #9ea7b4;
+    }
+    .layout-header {
+      height: 60px;
+      background: #fff;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+    }
+    .layout-logo-left {
+      height: 30px;
+      margin: 15px auto;
+      @include font(38px, #000, 700);
+    }
+    .layout-ceiling-main a {
+      color: #9ba7b5;
+    }
+    .layout-hide-text .layout-text {
+      display: none;
+    }
+    .ivu-col {
+      transition: width .2s ease-in-out;
+    }
+    .h3-title {
+      text-align: left;
+      @include font(18px, #000, 500);
+      line-height: 6;
+    }
+    .right-content {
+      width: 93%;
+      margin: 0 auto;
+      padding-bottom: 4em;
+    }
+  }
+}

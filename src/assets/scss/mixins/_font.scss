@@ -1,0 +1,19 @@
+@mixin lineHeight($height) {
+  height: $height;
+  line-height: $height;
+}
+
+@mixin font($font:12px,$color:#fff,$font-weight:400) {
+  font-size: $font;
+  color: $color;
+  font-weight: $font-weight;
+}
+
+@mixin link($font:12px,$color:#fff,$font-weight:400) {
+  display: block;
+  text-align: left;
+  @include font($font, $color, $font-weight);
+  &:hover {
+    color: $hoverMainColor;
+  }
+}
